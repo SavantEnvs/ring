@@ -1,0 +1,10 @@
+project: savantenvs/ring
+target: fuzz_ring_objfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ring_objfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ring_objfile
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_ring_objfile/fuzz_ring_objfile.dict
+    timeout: 5

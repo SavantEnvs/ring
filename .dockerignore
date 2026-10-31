@@ -1,0 +1,5 @@
+# Keep the full upstream tree (incl. .git) in the commit image; drop only editor/OS noise.
+.DS_Store
+*.swp
+*~
+**/__pycache__/
